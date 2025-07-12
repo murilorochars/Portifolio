@@ -9,7 +9,9 @@ const header = () => {
 
       <div className={styles.menu}>
         <ul>
-          <li>Sobre Mim</li>
+          <li>
+            <a href="#sobre_mim">Sobre Mim</a>
+          </li>
           <li>Projetos</li>
           <li>Conhecimentos</li>
           <li>Entre em Contato</li>
