@@ -1,0 +1,30 @@
+* {
+  --hue: 90;
+  list-style-type: none;
+  --primary-color: hsl(var(--hue), 92%, 43%);
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primary-color);
+  margin-top: 30px;
+}
+.titulo {
+  font-family: "Gemunu Libre", sans-serif;
+}
+.menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+.menu ul li {
+  font-size: 18px;
+}
+
+.icon ul {
+  display: flex;
+  gap: 20px;
+}
