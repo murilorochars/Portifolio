@@ -1,0 +1,59 @@
+.main {
+  color: white;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: transparent;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 250, 241, 0.2);
+  margin: 0 auto;
+  width: 90%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 1rem auto 0;
+  padding: 0 2rem;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: rgba(255, 250, 241, 0.8);
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcons a {
+  color: white;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.socialIcons a:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .socialIcons {
+    gap: 2rem;
+  }
+}

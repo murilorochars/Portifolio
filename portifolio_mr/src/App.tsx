@@ -5,6 +5,8 @@ import Hero from "./componentes/hero/hero";
 import About from "./componentes/sobre mim/about";
 import Projeto from "./componentes/projetos/projeto";
 import Conhecimentos from "./componentes/conhecimentos/conhecimentos";
+import Entrecontato from "./componentes/entrecontato/entrecontato";
+import Footer from "./componentes/footer/footer";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <About></About>
       <Projeto></Projeto>
       <Conhecimentos></Conhecimentos>
+      <Entrecontato></Entrecontato>
+      <Footer></Footer>
     </>
   );
 };

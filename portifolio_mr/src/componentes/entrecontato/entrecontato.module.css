@@ -1,0 +1,203 @@
+.container {
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: transparent;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.contactInfo {
+  flex: 1;
+  color: white;
+  padding-top: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsappButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2.5rem;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formTitle {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 0;
+  margin: 0;
+}
+
+.formGroup {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label,
+.textarea:focus + .label,
+.textarea:not(:placeholder-shown) + .label {
+  transform: translateY(-0.5rem);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  padding: 1rem;
+  background-color: white;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    gap: 2.5rem;
+  }
+
+  .formContainer {
+    min-width: 350px;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contactInfo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .formContainer {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .formContainer {
+    padding: 1.5rem;
+  }
+}
