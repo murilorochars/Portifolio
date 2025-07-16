@@ -1,12 +1,12 @@
 import Background from "./componentes/particulas";
 import "./App.css";
-import Header from "./componentes/header/header";
-import Hero from "./componentes/hero/hero";
-import About from "./componentes/sobre mim/about";
-import Projeto from "./componentes/projetos/projeto";
+import Header from "./componentes/header/header.tsx";
+import Hero from "./componentes/hero/hero.tsx";
+import About from "./componentes/sobre mim/about.tsx";
+import Projeto from "./componentes/projetos/projeto.tsx";
 import Conhecimentos from "./componentes/conhecimentos/conhecimentos";
-import Entrecontato from "./componentes/entrecontato/entrecontato";
-import Footer from "./componentes/footer/footer";
+import Entrecontato from "./componentes/entrecontato/entrecontato.tsx";
+import Footer from "./componentes/footer/footer.tsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
