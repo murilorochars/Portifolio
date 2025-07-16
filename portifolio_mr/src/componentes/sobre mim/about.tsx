@@ -1,4 +1,4 @@
-import style from "./about.module.css";
+import style from "./About.module.css";
 import img1 from "../../assets/IMG_7360.png";
 
 const About = () => {
