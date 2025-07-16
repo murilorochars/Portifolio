@@ -1,30 +1,134 @@
-* {
+:root {
   --hue: 90;
-  list-style-type: none;
   --primary-color: hsl(var(--hue), 92%, 43%);
 }
 
+* {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: white;
-  margin-top: 30px;
-}
-.titulo {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
   font-family: "Gemunu Libre", sans-serif;
 }
+
+.titulo h1 {
+  font-size: 2.2rem;
+  user-select: none;
+}
+
+/* Menu principal desktop */
 .menu ul {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .menu ul li {
   font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul li:hover a,
+.menu ul li:hover {
+}
+
+/* Ícones redes sociais */
 .icon ul {
   display: flex;
-  gap: 20px;
+  gap: 25px;
+}
+
+.icon ul li a svg {
+  transition: filter 0.3s ease;
+}
+
+.icon ul li a:hover svg {
+  filter: brightness(1.4);
+}
+
+/* Botão hamburger - escondido no desktop */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: 0;
+}
+
+/* --------- Responsividade ----------- */
+@media (max-width: 1150px) {
+  .header {
+    padding: 15px 25px;
+  }
+
+  .titulo h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Esconde o menu normal */
+  .menu {
+    position: fixed;
+    top: 70px; /* altura do header */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 220px;
+    height: calc(100vh - 70px);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.7);
+    border-left: 1px solid var(--primary-color);
+    z-index: 1100;
+    padding-top: 30px;
+    font-size: 18px;
+    border-radius: 0 0 0 10px;
+  }
+
+  /* Quando aberto */
+  .menu.menuOpen {
+    transform: translateX(0);
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+  }
+
+  .menu ul li {
+    font-size: 18px;
+  }
+
+  .menu ul li a {
+    color: white;
+    font-weight: 600;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

@@ -5,6 +5,7 @@
   align-items: center;
   height: 100vh;
   text-align: center;
+  padding: 0 20px;
 }
 
 .content {
@@ -31,7 +32,6 @@
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-
   animation: typ 2.5s steps(23, end) forwards,
     blink-caret 0.75s step-end infinite;
 }
@@ -41,22 +41,28 @@
 }
 
 .content button {
-  width: 180px;
-  height: 55px;
-  text-align: center;
-  background: #ffffff;
-  color: #0f0f0f;
-  border: none;
-  border-radius: 8px;
+  padding: 14px 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
 }
 
 .content button:hover {
-  background: #0f0f0f;
+  background: rgba(255, 255, 255, 0.12);
   color: #ffffff;
-  border: 1px solid white;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 @keyframes typing {
@@ -84,5 +90,53 @@
   }
   50% {
     border-color: white;
+  }
+}
+
+/* Responsivo para notebook/tablet */
+@media (max-width: 1024px) {
+  .typing {
+    font-size: 48px;
+  }
+
+  .typ {
+    font-size: 26px;
+  }
+
+  .content button {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}
+
+/* Responsivo para smartphone */
+@media (max-width: 768px) {
+  .typing {
+    font-size: 36px;
+  }
+
+  .typ {
+    font-size: 20px;
+  }
+
+  .content button {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Responsivo para tela muito pequena */
+@media (max-width: 480px) {
+  .typing {
+    font-size: 28px;
+  }
+
+  .typ {
+    font-size: 18px;
+  }
+
+  .content button {
+    padding: 10px 20px;
+    font-size: 13px;
   }
 }

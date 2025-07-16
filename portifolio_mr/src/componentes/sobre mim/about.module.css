@@ -1,42 +1,99 @@
 .main {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 40px;
-  padding: 50px 20px;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 60px 30px;
   color: white;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+
+.imagem {
+  flex: 0 0 320px;
 }
 
 .imagem img {
-  max-width: 320px;
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 14px;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
 .main h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 42px;
+  margin-bottom: 25px;
 }
 
 .main p {
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 600px;
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 700px;
 }
 
+/* Responsividade desktop de 1400px até 850px */
+@media (max-width: 1200px) {
+  .main {
+    gap: 40px;
+    padding: 50px 20px;
+  }
+
+  .imagem {
+    flex: 0 0 320px;
+  }
+
+  .main h2 {
+    font-size: 38px;
+  }
+
+  .main p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .imagem {
+    flex: 0 0 280px;
+  }
+
+  .main h2 {
+    font-size: 34px;
+  }
+
+  .main p {
+    font-size: 18px;
+  }
+}
+
+/* Só quando chegar realmente em tablet/mobile */
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+  }
+
+  .imagem {
+    flex: 0 0 auto;
   }
 
   .imagem img {
-    max-width: 250px;
+    max-width: 280px;
+  }
+
+  .main h2 {
+    font-size: 30px;
+  }
+
+  .main p {
+    font-size: 17px;
+    max-width: 90%;
   }
 }

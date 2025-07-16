@@ -7,8 +7,17 @@ import Projeto from "./componentes/projetos/projeto";
 import Conhecimentos from "./componentes/conhecimentos/conhecimentos";
 import Entrecontato from "./componentes/entrecontato/entrecontato";
 import Footer from "./componentes/footer/footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <Background />

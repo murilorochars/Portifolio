@@ -1,14 +1,17 @@
 import style from "./projetos.module.css";
 import { FaGithub } from "react-icons/fa";
-
+import Controle from "../../assets/tela_principal.png";
+import Port from "../../assets/portifolio.png";
+import Aged from "../../assets/Captura de tela 2025-01-04 220150.png";
+import Incor from "../../assets/Captura de tela 2025-07-15 222921.png";
 const Projeto = () => {
   return (
-    <div id="projetos" className={style.main}>
+    <div id="projetos_mr" className={style.main}>
       <h1>Meus Projetos</h1>
       <div className={style.cards}>
         <div className={style.card}>
           <h2>Aged Care</h2>
-          <video src="" controls />
+          <img src={Aged} alt="Aged Care" />
           <div className={style.overlay}>
             <a
               href="https://github.com/murilorochars"
@@ -27,7 +30,7 @@ const Projeto = () => {
 
         <div className={style.card}>
           <h2>Portfólio</h2>
-          <video src="" controls />
+          <img src={Port} alt="Portfólio" />
           <div className={style.overlay}>
             <a
               href="https://github.com/seurepo"
@@ -46,10 +49,10 @@ const Projeto = () => {
 
         <div className={style.card}>
           <h2>Controle de Estoque Python</h2>
-          <video src="" controls />
+          <img src={Controle} alt="Controle de Estoque Python" />
           <div className={style.overlay}>
             <a
-              href="https://github.com/seurepo"
+              href="https://github.com/murilorochars/Controle_de_estoque_python"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -65,7 +68,7 @@ const Projeto = () => {
 
         <div className={style.card}>
           <h2>Indecor</h2>
-          <video src="" controls />
+          <img src={Incor} alt="Indecor" />
           <div className={style.overlay}>
             <a
               href="https://github.com/seurepo"
@@ -81,7 +84,7 @@ const Projeto = () => {
 
         <div className={style.card}>
           <h2>PrimeFlix</h2>
-          <video src="" controls />
+          <img src="caminho/para/primeflix.jpg" alt="PrimeFlix" />
           <div className={style.overlay}>
             <a
               href="https://github.com/seurepo"
@@ -100,7 +103,7 @@ const Projeto = () => {
 
         <div className={style.card}>
           <h2>Estar por vir</h2>
-          <video src="" controls />
+          <img src="caminho/para/estar-por-vir.jpg" alt="Estar por vir" />
           <div className={style.overlay}>
             <a href="#" target="_blank" rel="noopener noreferrer">
               <FaGithub size={32} />
