@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Conhecimentos.module.css";
 
 export interface ConhecimentoItem {
