@@ -14,7 +14,7 @@ const Projeto = () => {
           <img src={Aged} alt="Aged Care" />
           <div className={style.overlay}>
             <a
-              href="https://github.com/murilorochars"
+              href="https://github.com/phrw8/AgedCare"
               target="_blank"
               rel="noopener noreferrer"
             >
